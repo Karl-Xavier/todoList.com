@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import InputArea from './components/InputArea';
+import ListArea from './components/ListArea';
+import Footer from './components/Footer';
 
-function App() {
+function App(){
+
+  const [items, setItems] = useState([])
+
+
+  function addItem(item){
+    setItems(prev => [...prev, item])
+  }
+
+/*   function handleDelete(index){
+    setItems(previous => {
+      return previous.filter((item, index) => {
+        return index !== id
+      })
+    })
+  } */
+
+  
+    function handleDelete(index){
+      const updatedItem = [...items]
+      updatedItem.splice(index, 1)
+      setItems(updatedItem)
+    }
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1 className='header'>Todo List</h1>
+      <div className='form'>
+        <InputArea
+          addItem={addItem}
+        />
+        <ListArea
+          items={items}
+          deleteItem={handleDelete}
+        />
+      </div>
+      <Footer/>
     </div>
   );
 }
-
 export default App;

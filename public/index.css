@@ -1,0 +1,120 @@
+body
+{
+    background-color: rgb(78, 189, 226);
+    font-family: 'Montserrat';
+}
+
+.container
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header
+{
+    color: #fff;
+    text-align: center;
+}
+
+.form
+{
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+    overflow-y: auto;
+}
+
+.input-box
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box input 
+{
+    height: 20px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.input-box .button
+{
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    color: blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.input-box .button:hover
+{
+    color: #000;
+    transition: .5s;
+}
+
+.list{
+    padding: 10px;
+}
+
+.list-div
+{
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list-div input
+{
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.list-div li
+{
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.list-div .button
+{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: rgb(78, 189, 226);;
+}
+
+.list-div .button:hover
+{
+    color: red;
+}
+
+.footer
+{
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 567px){
+    .form{
+        width: 300px;
+    }
+}
